@@ -41,6 +41,9 @@ const Checkout = (props)=> {
         if(!formIsValid){
            return; 
         }
+        props.submitOrderHandler({
+            name, street, city, postal
+        })
     }
 
     const nameValidityClasses = `${classes.control} ${formValidity.name ? '' : classes.invalid}`
